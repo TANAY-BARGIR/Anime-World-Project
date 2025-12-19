@@ -1,0 +1,14 @@
+[
+  { "id": 1, "name": "One Piece" },
+  { "id": 2, "name": "Naruto" },
+  { "id": 3, "name": "Attack on Titan" },
+  { "id": 4, "name": "Dragon Ball Z" },
+  { "id": 5, "name": "Bleach" },
+  { "id": 6, "name": "Jujutsu Kaisen" },
+  { "id": 7, "name": "My Hero Academia" },
+  { "id": 8, "name": "Fullmetal Alchemist: Brotherhood" },
+  { "id": 9, "name": "Demon Slayer" },
+  { "id": 10, "name": "Tokyo Ghoul" },
+  { "id": 11, "name": "Death Note" },
+  { "id": 12, "name": "Sword Art Online" }
+]

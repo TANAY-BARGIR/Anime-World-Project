@@ -1,0 +1,222 @@
+[
+  {
+    "id": 1,
+    "name": "One Piece",
+    "japanese": "ワンピース",
+    "type": "TV",
+    "episodes": "1000+",
+    "description": "One Piece is a story about a young pirate, Monkey D. Luffy, on his quest to find the legendary treasure, One Piece, and become the Pirate King.",
+    "genres": ["Adventure", "Action", "Fantasy"],
+    "status": "Ongoing",
+    "aired": "1999 to Present",
+    "studios": "Toei Animation",
+    "rating": "8.71",
+    "image": "/images/one-piece.jpg",
+    "characters": ["Monkey D. Luffy", "Roronoa Zoro", "Nami", "Sanji", "Usopp"]
+  },
+  {
+    "id": 2,
+    "name": "Naruto",
+    "japanese": "ナルト",
+    "type": "TV",
+    "episodes": "220",
+    "description": "Naruto follows the story of Naruto Uzumaki, a young ninja who seeks to become the strongest and gain the respect of his village while dealing with the burden of the Nine-Tails Fox inside him.",
+    "genres": ["Action", "Adventure", "Shounen"],
+    "status": "Completed",
+    "aired": "2002 to 2007",
+    "studios": "Studio Pierrot",
+    "rating": "8.3",
+    "image": "/images/naruto.jpg",
+    "characters": [
+      "Naruto Uzumaki",
+      "Sasuke Uchiha",
+      "Sakura Haruno",
+      "Kakashi Hatake"
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Attack on Titan",
+    "japanese": "進撃の巨人",
+    "type": "TV",
+    "episodes": "25",
+    "description": "Centuries ago, humanity was forced to live within massive walls to protect themselves from the terrifying Titans. Eren Yeager, motivated by revenge, joins the Survey Corps to fight these giant humanoid creatures.",
+    "genres": ["Action", "Mystery", "Drama", "Fantasy"],
+    "status": "Finished Airing",
+    "aired": "2013 to 2019",
+    "studios": "Wit Studio",
+    "rating": "8.52",
+    "image": "/images/aot.jpg",
+    "characters": [
+      "Eren Yeager",
+      "Mikasa Ackerman",
+      "Armin Arlert",
+      "Levi Ackerman"
+    ]
+  },
+  {
+    "id": 4,
+    "name": "Dragon Ball Z",
+    "japanese": "ドラゴンボールZ",
+    "type": "TV",
+    "episodes": "291",
+    "description": "Dragon Ball Z follows the adventures of Goku as he defends Earth from various powerful foes, such as Freeza, Cell, and Majin Buu.",
+    "genres": ["Action", "Adventure", "Shounen"],
+    "status": "Completed",
+    "aired": "1989 to 1996",
+    "studios": "Toei Animation",
+    "rating": "8.7",
+    "image": "/images/dbz.jpg",
+    "characters": ["Goku", "Vegeta", "Gohan", "Piccolo", "Frieza"]
+  },
+  {
+    "id": 5,
+    "name": "Bleach",
+    "japanese": "ブリーチ",
+    "type": "TV",
+    "episodes": "366",
+    "description": "Bleach follows Ichigo Kurosaki, a teenager who gains the powers of a Soul Reaper and must protect the living from evil spirits while fighting enemies from the Spirit World.",
+    "genres": ["Action", "Adventure", "Supernatural"],
+    "status": "Completed",
+    "aired": "2004 to 2012",
+    "studios": "Studio Pierrot",
+    "rating": "8.1",
+    "image": "/images/bleach.jpg",
+    "characters": [
+      "Ichigo Kurosaki",
+      "Rukia Kuchiki",
+      "Orihime Inoue",
+      "Uryu Ishida"
+    ]
+  },
+  {
+    "id": 6,
+    "name": "Jujutsu Kaisen",
+    "japanese": "呪術廻戦",
+    "type": "TV",
+    "episodes": "24",
+    "description": "Jujutsu Kaisen follows Yuji Itadori as he becomes involved in the world of curses after ingesting a powerful cursed object and gaining abilities to fight dangerous curses.",
+    "genres": ["Action", "Supernatural", "Shounen"],
+    "status": "Ongoing",
+    "aired": "2020 to Present",
+    "studios": "MAPPA",
+    "rating": "8.9",
+    "image": "/images/jjk.jpg",
+    "characters": [
+      "Yuji Itadori",
+      "Megumi Fushiguro",
+      "Nobara Kugisaki",
+      "Satoru Gojo"
+    ]
+  },
+  {
+    "id": 7,
+    "name": "My Hero Academia",
+    "japanese": "僕のヒーローアカデミア",
+    "type": "TV",
+    "episodes": "138+",
+    "description": "In a world where nearly everyone has superpowers known as Quirks, Izuku Midoriya, born without one, strives to become the greatest hero.",
+    "genres": ["Action", "Superhero", "Shounen"],
+    "status": "Ongoing",
+    "aired": "2016 to Present",
+    "studios": "Bones",
+    "rating": "8.3",
+    "image": "/images/mha.jpg",
+    "characters": [
+      "Izuku Midoriya",
+      "Katsuki Bakugo",
+      "Ochaco Uraraka",
+      "Shoto Todoroki"
+    ]
+  },
+  {
+    "id": 8,
+    "name": "Fullmetal Alchemist: Brotherhood",
+    "japanese": "鋼の錬金術師",
+    "type": "TV",
+    "episodes": "64",
+    "description": "Two brothers, Edward and Alphonse Elric, use alchemy to search for the Philosopher's Stone to restore their bodies after a failed alchemical experiment.",
+    "genres": ["Action", "Adventure", "Fantasy"],
+    "status": "Completed",
+    "aired": "2009 to 2010",
+    "studios": "Bones",
+    "rating": "9.2",
+    "image": "/images/fmab.jpg",
+    "characters": [
+      "Edward Elric",
+      "Alphonse Elric",
+      "Roy Mustang",
+      "Winry Rockbell"
+    ]
+  },
+  {
+    "id": 9,
+    "name": "Demon Slayer",
+    "japanese": "鬼滅の刃",
+    "type": "TV",
+    "episodes": "26",
+    "description": "Demon Slayer follows Tanjiro Kamado, a young boy who becomes a demon slayer to avenge his family and cure his sister, who was turned into a demon.",
+    "genres": ["Action", "Supernatural", "Adventure"],
+    "status": "Ongoing",
+    "aired": "2019 to Present",
+    "studios": "ufotable",
+    "rating": "8.6",
+    "image": "/images/demon-slayer.jpg",
+    "characters": [
+      "Tanjiro Kamado",
+      "Nezuko Kamado",
+      "Zenitsu Agatsuma",
+      "Inosuke Hashibira"
+    ]
+  },
+  {
+    "id": 10,
+    "name": "Tokyo Ghoul",
+    "japanese": "東京喰種",
+    "type": "TV",
+    "episodes": "12",
+    "description": "Tokyo Ghoul follows Ken Kaneki, a college student who becomes a half-ghoul after a near-fatal encounter, and his struggles to live in the world of humans and ghouls.",
+    "genres": ["Horror", "Supernatural", "Action"],
+    "status": "Completed",
+    "aired": "2014 to 2015",
+    "studios": "Studio Pierrot",
+    "rating": "8.0",
+    "image": "/images/tokyo-ghoul.jpg",
+    "characters": [
+      "Ken Kaneki",
+      "Touka Kirishima",
+      "Rize Kamishiro",
+      "Hideyoshi Nagachika"
+    ]
+  },
+  {
+    "id": 11,
+    "name": "Death Note",
+    "japanese": "デスノート",
+    "type": "TV",
+    "episodes": "37",
+    "description": "Death Note is about Light Yagami, a high school student who discovers a notebook that allows him to kill anyone whose name he writes in it.",
+    "genres": ["Psychological", "Thriller", "Supernatural"],
+    "status": "Completed",
+    "aired": "2006 to 2007",
+    "studios": "Madhouse",
+    "rating": "8.6",
+    "image": "/images/death-note.jpg",
+    "characters": ["Light Yagami", "L Lawliet", "Misa Amane", "Ryuk"]
+  },
+  {
+    "id": 12,
+    "name": "Sword Art Online",
+    "japanese": "ソードアート・オンライン",
+    "type": "TV",
+    "episodes": "25",
+    "description": "Sword Art Online follows Kirito, a player trapped in a virtual reality MMORPG, as he must fight to escape and protect his friends within the game.",
+    "genres": ["Action", "Adventure", "Fantasy"],
+    "status": "Ongoing",
+    "aired": "2012 to Present",
+    "studios": "A-1 Pictures",
+    "rating": "7.7",
+    "image": "/images/sao.jpg",
+    "characters": ["Kirito", "Asuna", "Leafa", "Sinon"]
+  }
+]

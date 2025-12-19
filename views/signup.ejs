@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up - Anime World</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #121212;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('/Images/home.png');
+            background-size: cover;
+        }
+
+        .auth-card {
+            background: rgba(30, 30, 30, 0.9);
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+            width: 100%;
+            max-width: 400px;
+            text-align: center;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+        }
+
+        h1 { margin-bottom: 30px; color: #00e676; letter-spacing: 1px; } /* Green for signup */
+
+        .form-group { margin-bottom: 20px; text-align: left; }
+        
+        label { display: block; margin-bottom: 8px; font-size: 0.9rem; color: #aaa; }
+        
+        input {
+            width: 100%;
+            padding: 12px;
+            border-radius: 6px;
+            border: 1px solid #444;
+            background: #222;
+            color: white;
+            outline: none;
+            transition: 0.3s;
+        }
+
+        input:focus { border-color: #00e676; background: #333; }
+
+        .btn-submit {
+            width: 100%;
+            padding: 12px;
+            background: #00e676;
+            color: black;
+            border: none;
+            border-radius: 6px;
+            font-size: 1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+            margin-top: 10px;
+        }
+
+        .btn-submit:hover { background: #00c853; transform: translateY(-2px); }
+
+        .switch-link { margin-top: 20px; font-size: 0.9rem; color: #888; }
+        .switch-link a { color: #00e676; text-decoration: none; font-weight: bold; }
+        .switch-link a:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+
+    <div class="auth-card">
+        <h1>Join the Crew</h1>
+        
+        <form action="/signup" method="POST">
+            <div class="form-group">
+                <label for="username">Pirate Name (Username)</label>
+                <input type="text" id="username" name="name" placeholder="Monkey D. Luffy" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" placeholder="nakama@anime.com" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" placeholder="••••••••" required>
+            </div>
+
+            <button type="submit" class="btn-submit">Create Account</button>
+        </form>
+
+        <div class="switch-link">
+            Already a member? <a href="/login">Login here</a>
+        </div>
+        <div class="switch-link">
+             <a href="/">&larr; Back to Home</a>
+        </div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Anime World</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bangers&family=Roboto:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+
+    <style>
+      /* --- RESET & BASICS --- */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        font-family: "Roboto", sans-serif;
+        color: white;
+        overflow-x: hidden;
+      }
+
+      /* --- NEW NAVBAR STYLES --- */
+      .navbar {
+        position: absolute; /* Floating on top of the hero */
+        top: 20px;
+        right: 40px;
+        z-index: 10;
+        display: flex;
+        gap: 20px;
+      }
+
+      .nav-btn {
+        text-decoration: none;
+        color: white;
+        font-weight: bold;
+        padding: 10px 20px;
+        border-radius: 30px;
+        background: rgba(0, 0, 0, 0.5);
+        backdrop-filter: blur(5px);
+        transition: 0.3s;
+        border: 1px solid rgba(255, 255, 255, 0.3);
+      }
+
+      .nav-btn:hover {
+        background: #ff4500;
+        border-color: #ff4500;
+        transform: translateY(-2px);
+      }
+
+      .nav-btn.primary {
+        background: #ff4500; /* Orange for Call to Action */
+        border-color: #ff4500;
+      }
+      .nav-btn.primary:hover {
+        background: #e03e00;
+      }
+
+      /* --- EXISTING STYLES (Kept exactly as you had them) --- */
+      .bg-image {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: url("/Images/home.png") no-repeat center center/cover;
+        filter: blur(0.7px);
+        z-index: -1;
+      }
+
+      .hero {
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 20px;
+      }
+
+      .hero h1 {
+        font-family: "Bangers", cursive;
+        font-size: 5rem;
+        letter-spacing: 3px;
+        color: #fff;
+        text-shadow: 4px 4px 0px #000;
+        margin-bottom: 20px;
+        animation: float 3s ease-in-out infinite;
+      }
+
+      .hero p {
+        font-size: 1.2rem;
+        max-width: 600px;
+        line-height: 1.6;
+        text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.8);
+      }
+
+      .scroll-indicator {
+        margin-top: 50px;
+        font-size: 2rem;
+        animation: bounce 2s infinite;
+      }
+
+      .anime-section {
+        padding: 100px 20px;
+        min-height: 80vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .anime-section h2 {
+        font-family: "Bangers", cursive;
+        font-size: 3rem;
+        margin-bottom: 40px;
+        text-shadow: 2px 2px 0 #000;
+      }
+
+      .anime-grid {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+        max-width: 1000px;
+      }
+
+      .anime-btn {
+        text-decoration: none;
+        color: white;
+        font-size: 1.5rem;
+        font-weight: bold;
+        padding: 15px 30px;
+        border: 2px solid rgba(255, 255, 255, 0.5);
+        border-radius: 50px;
+        background: rgba(0, 0, 0, 0.4);
+        backdrop-filter: blur(1px);
+        transition: all 0.3s ease;
+      }
+
+      .anime-btn:hover {
+        background: rgba(255, 69, 0, 0.8);
+        border-color: #ff4500;
+        transform: scale(1.1);
+        box-shadow: 0 0 15px #ff4500;
+      }
+
+      footer {
+        background: rgba(0, 0, 0, 0.4);
+        backdrop-filter: blur(1px);
+        padding: 40px 20px;
+        text-align: center;
+        margin-top: auto;
+      }
+
+      .social-icons {
+        margin-bottom: 20px;
+      }
+      .social-icons a {
+        color: white;
+        font-size: 1.5rem;
+        margin: 0 15px;
+        transition: color 0.3s;
+      }
+      .social-icons a:hover {
+        color: #ff4500;
+      }
+      .footer-text {
+        font-size: 0.9rem;
+        color: #888;
+        margin-top: 10px;
+      }
+
+      @keyframes float {
+        0% {
+          transform: translateY(0px);
+        }
+        50% {
+          transform: translateY(-10px);
+        }
+        100% {
+          transform: translateY(0px);
+        }
+      }
+      @keyframes bounce {
+        0%,
+        20%,
+        50%,
+        80%,
+        100% {
+          transform: translateY(0);
+        }
+        40% {
+          transform: translateY(-10px);
+        }
+        60% {
+          transform: translateY(-5px);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="bg-image"></div>
+
+    <div class="navbar">
+      <% if (isLoggedIn) { %>
+      <a href="/favourites" class="nav-btn"
+        ><i class="fas fa-heart"></i> My Favorites</a
+      >
+      <a href="/logout" class="nav-btn">Logout</a>
+      <% } else { %>
+      <a href="/login" class="nav-btn">Login</a>
+      <a href="/signup" class="nav-btn primary">Sign Up</a>
+      <% } %>
+    </div>
+
+    <section class="hero">
+      <h1>Welcome to the Anime World</h1>
+      <p>
+        Dive into the ultimate collection of your favorite characters. From the
+        pirates of the Grand Line to the ninjas of the Hidden Leaf, we provide
+        detailed insights, power levels, and backstories for every legend.
+      </p>
+      <div class="scroll-indicator">
+        <i class="fas fa-chevron-down"></i>
+      </div>
+    </section>
+
+    <section class="anime-section">
+      <h2>Explore Universes</h2>
+      <% if (!isLoggedIn) { %>
+      <p style="margin-bottom: 20px; color: #ff9966">
+        <i class="fas fa-lock"></i> Login to access details
+      </p>
+      <% } %>
+
+      <div class="anime-grid">
+        <% if (typeof animes !== 'undefined' && animes.length > 0) { %> <%
+        animes.forEach(anime => { %>
+        <a href="/anime/<%= anime.id %>" class="anime-btn">
+          <%= anime.name %>
+        </a>
+        <% }) %> <% } else { %>
+        <p>No animes found in the database.</p>
+        <% } %>
+      </div>
+    </section>
+
+    <footer>
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-linkedin"></i></a>
+        <a href="#"><i class="fab fa-github"></i></a>
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+      </div>
+      <p>This project is developed by <strong>Tanay</strong></p>
+      <p class="footer-text">&copy; 2024 Anime World. All Rights Reserved.</p>
+    </footer>
+  </body>
+</html>

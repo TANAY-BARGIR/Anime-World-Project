@@ -1,0 +1,586 @@
+[
+  {
+    "name": "Monkey D. Luffy",
+    "anime": "One Piece",
+    "image": "/images/luffy_char.jpg",
+    "description": "The captain of the Straw Hat Pirates. He ate the Gomu Gomu no Mi, which allows his body to stretch like rubber. His dream is to find the One Piece and become the Pirate King.",
+    "gender": "Male",
+    "birthday": "May 5",
+    "blood_type": "F",
+    "hair_color": "Black",
+    "tags": ["Pirate", "Captain", "Super Rookie", "Straw Hat"],
+    "special_attributes": {
+      "Devil Fruit": "Gomu Gomu no Mi (Gum-Gum Fruit)",
+      "Bounty": "3,000,000,000 Berries",
+      "Haki": "Conqueror's, Armament, Observation"
+    }
+  },
+  {
+    "name": "Roronoa Zoro",
+    "anime": "One Piece",
+    "image": "/images/zoro_char.jpg",
+    "description": "Roronoa Zoro is a swordsman who dreams of becoming the world's greatest. He is a loyal member of the Straw Hat Pirates, known for his incredible strength and three-sword style.",
+    "gender": "Male",
+    "birthday": "November 11",
+    "blood_type": "X",
+    "hair_color": "Green",
+    "tags": ["Swordsman", "Straw Hat", "Pirate"],
+    "special_attributes": {
+      "Bounty": "60,000,000 Berries",
+      "Sword Style": "Santoryu (Three-Sword Style)",
+      "Signature Move": "Santoryu Ogi: Ichidai Saikyo Zoro"
+    }
+  },
+  {
+    "name": "Nami",
+    "anime": "One Piece",
+    "image": "/images/nami_char.jpg",
+    "description": "Nami is the navigator of the Straw Hat Pirates. She is a skilled cartographer and thief who joins Luffy in pursuit of the One Piece while working towards her goal of creating a complete world map.",
+    "gender": "Female",
+    "birthday": "July 3",
+    "blood_type": "N/A",
+    "hair_color": "Orange",
+    "tags": ["Navigator", "Thief", "Straw Hat"],
+    "special_attributes": {
+      "Weapon": "Climatact",
+      "Skills": "Weather Manipulation, Cartography, Stealth"
+    }
+  },
+  {
+    "name": "Sanji",
+    "anime": "One Piece",
+    "image": "/images/sanji_char.jpg",
+    "description": "Sanji is the cook of the Straw Hat Pirates, known for his powerful kicking techniques and chivalrous nature. He dreams of finding the All Blue, a sea where all the fish of the world meet.",
+    "gender": "Male",
+    "birthday": "March 2",
+    "blood_type": "S",
+    "hair_color": "Blonde",
+    "tags": ["Cook", "Straw Hat", "Martial Artist"],
+    "special_attributes": {
+      "Bounty": "77,000,000 Berries",
+      "Fighting Style": "Black Leg",
+      "Signature Move": "Diable Jambe"
+    }
+  },
+  {
+    "name": "Usopp",
+    "anime": "One Piece",
+    "image": "/images/usopp_char.jpg",
+    "description": "Usopp is the sharpshooter and the crew's sniper. He is known for his great imagination and ability to craft innovative weapons. Usopp dreams of becoming a brave warrior of the sea like his father.",
+    "gender": "Male",
+    "birthday": "April 1",
+    "blood_type": "F",
+    "hair_color": "Black",
+    "tags": ["Sniper", "Inventor", "Straw Hat"],
+    "special_attributes": {
+      "Weapon": "Kabuto (Slingshot)",
+      "Skills": "Marksmanship, Weapon Crafting",
+      "Bounty": "30,000,000 Berries"
+    }
+  },
+  {
+    "name": "Naruto Uzumaki",
+    "anime": "Naruto",
+    "image": "/images/naruto_uzumaki.jpg",
+    "description": "The main protagonist of Naruto. Naruto is a young ninja with the goal of becoming the Hokage, the leader of his village. He is known for his never-give-up attitude and for having the Nine-Tails Fox sealed inside him.",
+    "gender": "Male",
+    "birthday": "October 10",
+    "blood_type": "B",
+    "hair_color": "Blonde",
+    "tags": ["Ninja", "Hokage", "Nine-Tails", "Hero"],
+    "special_attributes": {
+      "Chakra Nature": "Wind, Fire",
+      "Signature Move": "Rasengan",
+      "Ninja Rank": "Genin (later Hokage)"
+    }
+  },
+  {
+    "name": "Kakashi Hatake",
+    "anime": "Naruto",
+    "image": "/images/kakashi.jpg",
+    "description": "A jounin ninja from Konoha who is known as a prodigy of his age. He was formerly part of the elite ANBU unit, but now he leads Team 7. Known as 'Copy Ninja Kakashi' for his use of the Sharingan.",
+    "gender": "Male",
+    "birthday": "September 15",
+    "blood_type": "O",
+    "hair_color": "Grey",
+    "tags": ["Ninja", "Sensei", "Sharingan", "Copy Ninja"],
+    "special_attributes": {
+      "Ninja Rank": "Jonin (later Hokage)",
+      "Chakra Nature": "Lightning, Earth, Water, Fire",
+      "Signature Move": "Chidori / Raikiri"
+    }
+  },
+  {
+    "name": "Sasuke Uchiha",
+    "anime": "Naruto",
+    "image": "/images/sasuke_uchiha.jpg",
+    "description": "Sasuke Uchiha is a talented and serious ninja, known for his Sharingan and his desire for revenge against his older brother, Itachi. He is initially a member of Team 7 and later plays a major role in the series' events.",
+    "gender": "Male",
+    "birthday": "July 23",
+    "blood_type": "AB",
+    "hair_color": "Black",
+    "tags": ["Ninja", "Uchiha", "Avenger"],
+    "special_attributes": {
+      "Sharingan": "Mangekyo Sharingan",
+      "Chakra Nature": "Fire, Lightning",
+      "Signature Move": "Chidori"
+    }
+  },
+  {
+    "name": "Sakura Haruno",
+    "anime": "Naruto",
+    "image": "/images/sakura_haruno.jpg",
+    "description": "Sakura Haruno is a ninja from Konoha and a member of Team 7. Known for her exceptional strength, medical ninjutsu skills, and being a key figure in Naruto's growth.",
+    "gender": "Female",
+    "birthday": "March 28",
+    "blood_type": "A",
+    "hair_color": "Pink",
+    "tags": ["Ninja", "Medical Ninja", "Team 7"],
+    "special_attributes": {
+      "Chakra Nature": "Earth, Water, Fire",
+      "Signature Move": "Chakra Enhanced Strength, Cherry Blossom Jutsu"
+    }
+  },
+  {
+    "name": "Eren Yeager",
+    "anime": "Attack on Titan",
+    "image": "/images/eren_yeager.jpg",
+    "description": "Eren Yeager is the main protagonist of Attack on Titan, known for his drive to destroy the Titans and reclaim humanity's freedom. His intense desire for revenge pushes him to extraordinary lengths.",
+    "gender": "Male",
+    "birthday": "March 30",
+    "blood_type": "A",
+    "hair_color": "Brown",
+    "tags": ["Survey Corps", "Titan Shifter", "Revenge"],
+    "special_attributes": {
+      "Titan Form": "Attack Titan",
+      "Abilities": "Enhanced Strength, Speed, Regeneration",
+      "Berserk Mode": "Can temporarily lose control of his Titan form"
+    }
+  },
+  {
+    "name": "Mikasa Ackerman",
+    "anime": "Attack on Titan",
+    "image": "/images/mikasa_ackerman.jpg",
+    "description": "Mikasa Ackerman is one of the top soldiers of the Survey Corps and Eren's adoptive sister. She is an incredibly skilled fighter and is dedicated to protecting Eren at all costs.",
+    "gender": "Female",
+    "birthday": "February 10",
+    "blood_type": "A",
+    "hair_color": "Black",
+    "tags": ["Soldier", "Ackerman", "Protector"],
+    "special_attributes": {
+      "Combat Skills": "Master of 3D Maneuver Gear",
+      "Physical Strength": "Superhuman Strength, Agility",
+      "Signature Move": "Mikasa's Attack Style"
+    }
+  },
+  {
+    "name": "Armin Arlert",
+    "anime": "Attack on Titan",
+    "image": "/images/armin_arlert.jpg",
+    "description": "Armin Arlert is a close friend of Eren and Mikasa. Though initially weak, he has a brilliant strategic mind, often coming up with plans that save the Survey Corps from danger.",
+    "gender": "Male",
+    "birthday": "November 3",
+    "blood_type": "B",
+    "hair_color": "Blonde",
+    "tags": ["Strategist", "Friend", "Survey Corps"],
+    "special_attributes": {
+      "Intelligence": "Tactical Genius",
+      "Titan Form": "Colossal Titan (later in series)"
+    }
+  },
+  {
+    "name": "Levi Ackerman",
+    "anime": "Attack on Titan",
+    "image": "/images/levi_ackerman.jpg",
+    "description": "Levi Ackerman is known as humanity's strongest soldier. His unparalleled combat abilities and leadership make him a key figure in the fight against the Titans.",
+    "gender": "Male",
+    "birthday": "December 25",
+    "blood_type": "O",
+    "hair_color": "Black",
+    "tags": ["Soldier", "Ackerman", "Humanity's Strongest"],
+    "special_attributes": {
+      "Combat Skills": "Master of 3D Maneuver Gear",
+      "Signature Move": "Levi's Precision Strikes"
+    }
+  },
+  {
+    "name": "Goku",
+    "anime": "Dragon Ball Z",
+    "image": "/images/goku_char.jpg",
+    "description": "Goku is a Saiyan who was sent to Earth as a baby. Over the course of the series, he becomes one of the strongest fighters in the universe, constantly seeking challenges to grow stronger.",
+    "gender": "Male",
+    "birthday": "April 16",
+    "blood_type": "O",
+    "hair_color": "Black",
+    "tags": ["Saiyan", "Fighter", "Z Warrior"],
+    "special_attributes": {
+      "Transformation": "Super Saiyan, Ultra Instinct",
+      "Signature Move": "Kamehameha",
+      "Power Level": "Planetary Destruction"
+    }
+  },
+  {
+    "name": "Vegeta",
+    "anime": "Dragon Ball Z",
+    "image": "/images/vegeta_char.jpg",
+    "description": "Vegeta is the prince of the Saiyan race and initially one of Goku's greatest rivals. Over time, he becomes one of Earth's strongest defenders.",
+    "gender": "Male",
+    "birthday": "November 18",
+    "blood_type": "A",
+    "hair_color": "Black",
+    "tags": ["Saiyan", "Prince", "Z Warrior"],
+    "special_attributes": {
+      "Transformation": "Super Saiyan, Super Saiyan Blue",
+      "Signature Move": "Final Flash",
+      "Power Level": "Planetary Destruction"
+    }
+  },
+  {
+    "name": "Frieza",
+    "anime": "Dragon Ball Z",
+    "image": "/images/frieza_char.jpg",
+    "description": "Frieza is one of the most powerful and infamous villains in the *Dragon Ball* universe. He is the emperor of the universe, known for his cruelty and tyrannical rule.",
+    "gender": "Male",
+    "birthday": "Unknown",
+    "blood_type": "Unknown",
+    "hair_color": "None",
+    "tags": ["Villain", "Emperor", "Tyrant"],
+    "special_attributes": {
+      "Transformation": "Final Form, Golden Frieza",
+      "Signature Move": "Death Beam, Death Ball",
+      "Power Level": "Planet Destruction"
+    }
+  },
+  {
+    "name": "Ichigo Kurosaki",
+    "anime": "Bleach",
+    "image": "/images/ichigo_kurosaki.jpg",
+    "description": "Ichigo Kurosaki is a teenager who becomes a Soul Reaper after accidentally receiving the powers of Rukia Kuchiki. He fights evil spirits known as Hollows and defends the living from threats from the Spirit World.",
+    "gender": "Male",
+    "birthday": "July 15",
+    "blood_type": "O",
+    "hair_color": "Orange",
+    "tags": ["Soul Reaper", "Protector", "Hollow Fighter"],
+    "special_attributes": {
+      "Zanpakuto": "Zangetsu",
+      "Chakra Nature": "None (Uses Spiritual Energy)",
+      "Special Ability": "Getsuga Tenshou"
+    }
+  },
+  {
+    "name": "Rukia Kuchiki",
+    "anime": "Bleach",
+    "image": "/images/rukia_kuchiki.jpg",
+    "description": "Rukia Kuchiki is a Soul Reaper who becomes Ichigo's mentor and the catalyst for Ichigo's transformation into a Soul Reaper. She is a member of the prestigious Kuchiki clan.",
+    "gender": "Female",
+    "birthday": "January 14",
+    "blood_type": "A",
+    "hair_color": "Black",
+    "tags": ["Soul Reaper", "Mentor", "Kuchiki"],
+    "special_attributes": {
+      "Zanpakuto": "Sode no Shirayuki",
+      "Special Ability": "Ice Manipulation"
+    }
+  },
+  {
+    "name": "Orihime Inoue",
+    "anime": "Bleach",
+    "image": "/images/orihime_inoue.jpg",
+    "description": "Orihime Inoue is a close friend of Ichigo and an important character in the *Bleach* series. She possesses powerful healing abilities and later becomes a key figure in the battles against the Hollows.",
+    "gender": "Female",
+    "birthday": "September 3",
+    "blood_type": "B",
+    "hair_color": "Orange",
+    "tags": ["Healer", "Protector", "Friend"],
+    "special_attributes": {
+      "Abilities": "Shun Shun Rikka (Six Flowers of the Guardian)",
+      "Power": "Healing and Shielding Techniques"
+    }
+  },
+  {
+    "name": "Uryu Ishida",
+    "anime": "Bleach",
+    "image": "/images/uryu_ishida.jpg",
+    "description": "Uryu Ishida is a Quincy and one of Ichigo's closest friends. He initially distances himself from others but eventually becomes a trusted ally in the battle against the forces of darkness.",
+    "gender": "Male",
+    "birthday": "November 6",
+    "blood_type": "AB",
+    "hair_color": "Black",
+    "tags": ["Quincy", "Archer", "Ally"],
+    "special_attributes": {
+      "Weapon": "Bow and Arrow",
+      "Abilities": "Quincy Powers (Spirit Arrow, Seele Schneider)"
+    }
+  },
+  {
+    "name": "Yuji Itadori",
+    "anime": "Jujutsu Kaisen",
+    "image": "/images/yuji_itadori.jpg",
+    "description": "Yuji Itadori is the main protagonist of *Jujutsu Kaisen*. He swallows a cursed object, which allows him to possess incredible abilities but also puts his life in constant danger from curses.",
+    "gender": "Male",
+    "birthday": "March 20",
+    "blood_type": "AB",
+    "hair_color": "Pinkish Brown",
+    "tags": ["Jujutsu Sorcerer", "Cursed", "Protector"],
+    "special_attributes": {
+      "Cursed Energy": "Possesses Sukuna's cursed energy",
+      "Signature Move": "Divergent Fist",
+      "Special Ability": "Superhuman Strength, Speed, and Regeneration"
+    }
+  },
+  {
+    "name": "Megumi Fushiguro",
+    "anime": "Jujutsu Kaisen",
+    "image": "/images/megumi_fushiguro.jpg",
+    "description": "Megumi Fushiguro is a talented jujutsu sorcerer and a classmate of Yuji. He specializes in the use of shikigami, summoning powerful spirits to assist him in battle.",
+    "gender": "Male",
+    "birthday": "December 22",
+    "blood_type": "A",
+    "hair_color": "Black",
+    "tags": ["Jujutsu Sorcerer", "Shikigami", "Stoic"],
+    "special_attributes": {
+      "Cursed Technique": "Ten Shadows Technique",
+      "Signature Move": "Shikigami Summoning"
+    }
+  },
+  {
+    "name": "Nobara Kugisaki",
+    "anime": "Jujutsu Kaisen",
+    "image": "/images/nobara_kugisaki.jpg",
+    "description": "Nobara Kugisaki is a powerful jujutsu sorcerer who uses a unique combination of cursed energy and nails to defeat curses. She is known for her tough attitude and sense of justice.",
+    "gender": "Female",
+    "birthday": "August 7",
+    "blood_type": "O",
+    "hair_color": "Orange",
+    "tags": ["Jujutsu Sorcerer", "Fighter", "Cursed Energy User"],
+    "special_attributes": {
+      "Cursed Technique": "Resonance",
+      "Signature Move": "Straw Doll Technique"
+    }
+  },
+  {
+    "name": "Satoru Gojo",
+    "anime": "Jujutsu Kaisen",
+    "image": "/images/satoru_gojo.jpg",
+    "description": "Satoru Gojo is one of the most powerful jujutsu sorcerers in *Jujutsu Kaisen*. His mastery of cursed energy and his unshakable confidence make him a key figure in the battle against curses.",
+    "gender": "Male",
+    "birthday": "December 7",
+    "blood_type": "A",
+    "hair_color": "White",
+    "tags": ["Jujutsu Sorcerer", "Teacher", "Powerhouse"],
+    "special_attributes": {
+      "Cursed Technique": "Limitless",
+      "Signature Move": "Infinity, Hollow Purple"
+    }
+  },
+  {
+    "name": "Izuku Midoriya",
+    "anime": "My Hero Academia",
+    "image": "/images/izuku_midoriya.jpg",
+    "description": "Izuku Midoriya is the protagonist of *My Hero Academia*. Born without a Quirk, he inherits the power of the legendary hero All Might and strives to become the greatest hero in the world.",
+    "gender": "Male",
+    "birthday": "July 15",
+    "blood_type": "O",
+    "hair_color": "Green",
+    "tags": ["Hero", "Protagonist", "Quirkless"],
+    "special_attributes": {
+      "Quirk": "One For All",
+      "Signature Move": "Detroit Smash, Full Cowl"
+    }
+  },
+  {
+    "name": "Katsuki Bakugo",
+    "anime": "My Hero Academia",
+    "image": "/images/katsuki_bakugo.jpg",
+    "description": "Katsuki Bakugo is a hot-headed and powerful student at U.A. High School. Known for his explosive personality and his explosive Quirk, he constantly strives to become the number one hero.",
+    "gender": "Male",
+    "birthday": "April 20",
+    "blood_type": "A",
+    "hair_color": "Blonde",
+    "tags": ["Hero", "Explosive", "Rival"],
+    "special_attributes": {
+      "Quirk": "Explosion",
+      "Signature Move": "Howitzer Impact"
+    }
+  },
+  {
+    "name": "Ochaco Uraraka",
+    "anime": "My Hero Academia",
+    "image": "/images/ochaco_uraraka.jpg",
+    "description": "A student at U.A. High School with a cheerful personality. She wants to become a pro hero to financially support her family.",
+    "gender": "Female",
+    "birthday": "December 27",
+    "blood_type": "O",
+    "hair_color": "Brown",
+    "tags": ["Hero", "Support", "U.A. Student"],
+    "special_attributes": {
+      "Quirk": "Zero Gravity",
+      "Signature Move": "Meteor Shower"
+    }
+  },
+  {
+    "name": "Shoto Todoroki",
+    "anime": "My Hero Academia",
+    "image": "/images/shoto_todoroki.jpg",
+    "description": "A powerful hero student born from a famous hero lineage. He possesses both fire and ice abilities.",
+    "gender": "Male",
+    "birthday": "January 11",
+    "blood_type": "O",
+    "hair_color": "Red & White",
+    "tags": ["Hero", "Dual Power", "U.A. Student"],
+    "special_attributes": {
+      "Quirk": "Half-Cold Half-Hot",
+      "Abilities": "Ice Manipulation, Fire Manipulation"
+    }
+  },
+  {
+    "name": "Edward Elric",
+    "anime": "Fullmetal Alchemist: Brotherhood",
+    "image": "/images/edward_elric.jpg",
+    "description": "The youngest State Alchemist in history, determined to restore his brother's body using alchemy.",
+    "gender": "Male",
+    "birthday": "February 3",
+    "blood_type": "Unknown",
+    "hair_color": "Blonde",
+    "tags": ["Alchemist", "State Alchemist", "Brother"],
+    "special_attributes": {
+      "Alchemy Type": "Human Transmutation (Taboo)",
+      "Title": "Fullmetal Alchemist"
+    }
+  },
+  {
+    "name": "Alphonse Elric",
+    "anime": "Fullmetal Alchemist: Brotherhood",
+    "image": "/images/alphonse_elric.jpg",
+    "description": "Edward’s younger brother whose soul is bound to a suit of armor after a failed alchemy experiment.",
+    "gender": "Male",
+    "birthday": "Unknown",
+    "blood_type": "Unknown",
+    "hair_color": "Blonde",
+    "tags": ["Alchemist", "Armor Body", "Brother"],
+    "special_attributes": {
+      "Alchemy": "Soul Binding",
+      "Strength": "Superhuman Durability"
+    }
+  },
+  {
+    "name": "Roy Mustang",
+    "anime": "Fullmetal Alchemist: Brotherhood",
+    "image": "/images/roy_mustang.jpg",
+    "description": "A charismatic State Alchemist known for his flame-based alchemy and leadership skills.",
+    "gender": "Male",
+    "birthday": "December 20",
+    "blood_type": "Unknown",
+    "hair_color": "Black",
+    "tags": ["State Alchemist", "Leader", "Strategist"],
+    "special_attributes": {
+      "Alchemy Type": "Flame Alchemy",
+      "Title": "Flame Alchemist"
+    }
+  },
+  {
+    "name": "Tanjiro Kamado",
+    "anime": "Demon Slayer",
+    "image": "/images/tanjiro_kamado.jpg",
+    "description": "A kind-hearted boy who becomes a Demon Slayer to save his sister and avenge his family.",
+    "gender": "Male",
+    "birthday": "July 14",
+    "blood_type": "Unknown",
+    "hair_color": "Black & Red",
+    "tags": ["Demon Slayer", "Swordsman", "Brother"],
+    "special_attributes": {
+      "Breathing Style": "Water Breathing / Sun Breathing",
+      "Enhanced Sense": "Smell"
+    }
+  },
+  {
+    "name": "Nezuko Kamado",
+    "anime": "Demon Slayer",
+    "image": "/images/nezuko_kamado.jpg",
+    "description": "Tanjiro’s younger sister who was turned into a demon but retains her humanity.",
+    "gender": "Female",
+    "birthday": "December 28",
+    "blood_type": "Unknown",
+    "hair_color": "Black",
+    "tags": ["Demon", "Sister", "Protector"],
+    "special_attributes": {
+      "Demon Art": "Blood Explosion",
+      "Ability": "Sunlight Resistance"
+    }
+  },
+  {
+    "name": "Ken Kaneki",
+    "anime": "Tokyo Ghoul",
+    "image": "/images/ken_kaneki.jpg",
+    "description": "A college student who becomes a half-ghoul after a tragic accident.",
+    "gender": "Male",
+    "birthday": "December 20",
+    "blood_type": "Unknown",
+    "hair_color": "Black / White",
+    "tags": ["Half-Ghoul", "Anti-Hero", "Tragic"],
+    "special_attributes": {
+      "Kagune": "Rinkaku",
+      "Enhanced Traits": "Regeneration, Strength"
+    }
+  },
+  {
+    "name": "Light Yagami",
+    "anime": "Death Note",
+    "image": "/images/light_yagami.jpg",
+    "description": "A brilliant student who discovers the Death Note and seeks to become the god of a new world.",
+    "gender": "Male",
+    "birthday": "February 28",
+    "blood_type": "A",
+    "hair_color": "Brown",
+    "tags": ["Anti-Hero", "Genius", "Kira"],
+    "special_attributes": {
+      "Weapon": "Death Note",
+      "Intelligence": "Genius-Level"
+    }
+  },
+  {
+    "name": "L Lawliet",
+    "anime": "Death Note",
+    "image": "/images/l_lawliet.jpg",
+    "description": "A mysterious and eccentric detective determined to catch Kira.",
+    "gender": "Male",
+    "birthday": "October 31",
+    "blood_type": "Unknown",
+    "hair_color": "Black",
+    "tags": ["Detective", "Genius", "Rival"],
+    "special_attributes": {
+      "Investigation Skill": "World-Class Detective",
+      "Alias": "L"
+    }
+  },
+  {
+    "name": "Kirito",
+    "anime": "Sword Art Online",
+    "image": "/images/kirito.jpg",
+    "description": "A skilled solo player trapped in a virtual reality MMORPG.",
+    "gender": "Male",
+    "birthday": "October 7",
+    "blood_type": "Unknown",
+    "hair_color": "Black",
+    "tags": ["Swordsman", "Gamer", "Solo Player"],
+    "special_attributes": {
+      "Weapon Style": "Dual Blades",
+      "Skill": "Swordsmanship Mastery"
+    }
+  },
+  {
+    "name": "Asuna",
+    "anime": "Sword Art Online",
+    "image": "/images/asuna.jpg",
+    "description": "A strong and compassionate fighter known as the Lightning Flash.",
+    "gender": "Female",
+    "birthday": "September 30",
+    "blood_type": "Unknown",
+    "hair_color": "Chestnut",
+    "tags": ["Swordswoman", "Leader", "Support"],
+    "special_attributes": {
+      "Weapon": "Rapier",
+      "Title": "Lightning Flash"
+    }
+  }
+]
