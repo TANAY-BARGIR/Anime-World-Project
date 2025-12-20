@@ -1,10 +1,24 @@
+require('dotenv').config();
+
 const express = require("express");
 const fs = require("fs");
 const path = require("path");
 const cookieSession = require("cookie-session");
+const mongoose = require("mongoose");
+const User = require("./models/User");
+const Favorite = require("./models/Favorite");
 
 const app = express();
 const PORT = 3000;
+
+mongoose
+  .connect(process.env.MONGODB_URI)
+  .then(() => {
+    console.log("✅ MongoDB Connected!");
+  })
+  .catch((err) => {
+    console.log("❌ Connection Error:", err);
+  });
 
 const animespath = path.join(__dirname, "data", "animes.json");
 const animedetailspath = path.join(__dirname, "data", "anime_details.json");
@@ -13,8 +27,6 @@ const characterdetailspath = path.join(
   "data",
   "character_details.json"
 );
-const favpath = path.join(__dirname, "data", "favourites.json");
-const userpath = path.join(__dirname, "data", "users.json");
 
 app.set("view engine", "ejs");
 app.use(express.static("public"));
@@ -22,16 +34,16 @@ app.use(express.urlencoded({ extended: true }));
 app.use(
   cookieSession({
     name: "session",
-    keys: ["secret-key-tanay"], // Ideally hide this in environment variables
-    maxAge: 24 * 60 * 60 * 1000, // 24 hours
+    keys: [process.env.SESSION_SECRET],
+    maxAge: 24 * 60 * 60 * 1000,
   })
 );
 
 const requireLogin = (req, res, next) => {
   if (req.session.userId) {
-    next(); // User is good, let them pass
+    next();
   } else {
-    res.redirect("/login"); // Stop right there! Go to login.
+    res.redirect("/login");
   }
 };
 
@@ -47,7 +59,7 @@ app.get("/", (req, res) => {
   });
 });
 
-app.get("/anime/:id", (req, res) => {
+app.get("/anime/:id", requireLogin, (req, res) => {
   const id_to_find = parseInt(req.params.id);
   fs.readFile(animedetailspath, (err, data) => {
     const animeDetails = JSON.parse(data || "[]");
@@ -59,7 +71,8 @@ app.get("/anime/:id", (req, res) => {
     }
   });
 });
-app.get("/character/:name", (req, res) => {
+
+app.get("/character/:name", requireLogin, (req, res) => {
   const name_to_find = req.params.name;
   fs.readFile(characterdetailspath, (err, data) => {
     const characterDetails = JSON.parse(data || "[]");
@@ -73,28 +86,39 @@ app.get("/character/:name", (req, res) => {
     }
   });
 });
-app.get("/favourites", (req, res) => {
-  fs.readFile(favpath, (err, data) => {
-    const favs = JSON.parse(data || "[]");
+
+app.get("/favourites", requireLogin, async (req, res) => {
+  try {
+    const favs = await Favorite.find({ user_id: req.session.userId });
     res.render("favourites", { favourites: favs });
-  });
+  } catch (err) {
+    console.log(err);
+    res.status(500).send("Error fetching favorites");
+  }
 });
 
-app.post("/favourites", (req, res) => {
-  const newChar = req.body;
-  fs.readFile(favpath, (err, data) => {
-    const favs = JSON.parse(data || "[]");
-    const found = favs.find((fav) => fav.name === newChar.name);
+app.post("/favourites", requireLogin, async (req, res) => {
+  const { name, anime, image } = req.body;
+  try {
+    const found = await Favorite.findOne({
+      user_id: req.session.userId,
+      name: name,
+    });
     if (found) {
       res.redirect("/favourites");
     } else {
-      favs.push(newChar);
-      fs.writeFile(favpath, JSON.stringify(favs, null, 2), (err) => {
-        if (err) res.status(500).send(`Failed to Add: Server Error!`);
-        else res.redirect("/favourites");
+      await Favorite.create({
+        user_id: req.session.userId,
+        name: name,
+        anime: anime,
+        image: image,
       });
+      res.redirect("/favourites");
     }
-  });
+  } catch (err) {
+    console.log(err);
+    res.status(500).send("Error adding favorite");
+  }
 });
 
 app.get("/login", (req, res) => {
@@ -105,43 +129,46 @@ app.get("/signup", (req, res) => {
   res.render("signup");
 });
 
-app.post("/login", (req, res) => {
-  const userDetails = req.body;
-  fs.readFile(userpath, (err, data) => {
-    const users = JSON.parse(data || "[]");
-    const found = users.find((user) => user.email === userDetails.email);
-    if (found) {
-      if (found.password === userDetails.password) {
-        req.session.userId = found.id;
-        res.redirect("/");
-      } else {
-        res.send(`Incorrect Password <a href='/login'>Try Again</a>`);
-      }
+app.post("/login", async (req, res) => {
+  const { email, password } = req.body;
+  try {
+    const found = await User.findOne({ email: email });
+    if (found && found.password === password) {
+      req.session.userId = found._id;
+      res.redirect("/");
     } else {
-      res.redirect("/signup");
+      res.send(`Invalid Email or Password <a href="/login"> Try Again</a>`);
     }
-  });
+  } catch (err) {
+    console.log(err);
+    res.status(500).send("Login Error");
+  }
 });
 
-app.post("/signup", (req, res) => {
-  const newUser = req.body;
-  fs.readFile(userpath, (err, data) => {
-    const users = JSON.parse(data || "[]");
-    const found = users.find((user) => user.email === newUser.email);
-    if (found) res.redirect("/login");
+app.post("/signup", async (req, res) => {
+  const { name, email, password } = req.body;
+  try {
+    const found = await User.findOne({ email: email });
+    if (found)
+      return res.send("User already exists. <a href='/login'>Login here</a>");
     else {
-      newUser.id = Date.now().toString();
-      users.push(newUser);
-      fs.writeFile(userpath, JSON.stringify(users, null, 2), (err) => {
-        if (err) res.status(500).send(`Failed to Add: Server Error!`);
-        else res.redirect("/login");
+      const newUser = new User({
+        username: name,
+        email: email,
+        password: password,
       });
+      await newUser.save();
+      console.log("New User Created:", newUser);
+      res.redirect("/login");
     }
-  });
+  } catch (err) {
+    console.log(err);
+    res.status(500).send("Error creating user");
+  }
 });
 
 app.get("/logout", (req, res) => {
-  req.session = null; // Clear the session
+  req.session = null;
   res.redirect("/");
 });
 
