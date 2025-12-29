@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 
 const favoriteSchema = new mongoose.Schema({
     user_id: {
-        type: mongoose.Schema.Types.ObjectId, // Links to the User who added it
+        type: mongoose.Schema.Types.ObjectId, 
         ref: 'User',
         required: true
     },

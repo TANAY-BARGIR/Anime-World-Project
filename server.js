@@ -1,24 +1,22 @@
-require('dotenv').config();
+require("dotenv").config();
 
 const express = require("express");
 const fs = require("fs");
 const path = require("path");
-const cookieSession = require("cookie-session");
 const mongoose = require("mongoose");
+const jwt = require("jsonwebtoken");
+const cookieParser = require("cookie-parser");
 const User = require("./models/User");
 const Favorite = require("./models/Favorite");
 
 const app = express();
 const PORT = 3000;
+const authRouter = express.Router();
 
 mongoose
   .connect(process.env.MONGODB_URI)
-  .then(() => {
-    console.log("✅ MongoDB Connected!");
-  })
-  .catch((err) => {
-    console.log("❌ Connection Error:", err);
-  });
+  .then(() => console.log("✅ MongoDB Connected!"))
+  .catch((err) => console.log("❌ Connection Error:", err));
 
 const animespath = path.join(__dirname, "data", "animes.json");
 const animedetailspath = path.join(__dirname, "data", "anime_details.json");
@@ -31,30 +29,57 @@ const characterdetailspath = path.join(
 app.set("view engine", "ejs");
 app.use(express.static("public"));
 app.use(express.urlencoded({ extended: true }));
-app.use(
-  cookieSession({
-    name: "session",
-    keys: [process.env.SESSION_SECRET],
-    maxAge: 24 * 60 * 60 * 1000,
-  })
-);
+app.use(cookieParser());
+app.use(authRouter);
+
+const createToken = (id) => {
+  return jwt.sign({ id }, process.env.SESSION_SECRET, { expiresIn: "1d" });
+};
 
 const requireLogin = (req, res, next) => {
-  if (req.session.userId) {
-    next();
+  const token = req.cookies.jwt;
+
+  if (token) {
+    jwt.verify(token, process.env.SESSION_SECRET, (err, decodedToken) => {
+      if (err) {
+        res.redirect("/login");
+      } else {
+        req.userId = decodedToken.id; // This line stores the userId in req , we can access it anywhere throughout the code
+        next();
+      }
+    });
   } else {
     res.redirect("/login");
   }
 };
 
+const checkUser = (req, res, next) => {
+  const token = req.cookies.jwt;
+  if (token) {
+    jwt.verify(token, process.env.SESSION_SECRET, (err, decodedToken) => {
+      if (err) {
+        res.locals.user = null;
+        next();
+      } else {
+        res.locals.user = decodedToken.id;
+        next();
+      }
+    });
+  } else {
+    res.locals.user = null;
+    next();
+  }
+};
+
+app.use(checkUser);
+
 app.get("/", (req, res) => {
   fs.readFile(animespath, (err, data) => {
     const animeList = JSON.parse(data || "[]");
-    const isLoggedIn = !!req.session.userId;
     res.render("index", {
       title: "Anime World",
       animes: animeList,
-      isLoggedIn: isLoggedIn,
+      isLoggedIn: !!res.locals.user,
     });
   });
 });
@@ -89,7 +114,7 @@ app.get("/character/:name", requireLogin, (req, res) => {
 
 app.get("/favourites", requireLogin, async (req, res) => {
   try {
-    const favs = await Favorite.find({ user_id: req.session.userId });
+    const favs = await Favorite.find({ user_id: req.userId });
     res.render("favourites", { favourites: favs });
   } catch (err) {
     console.log(err);
@@ -101,14 +126,15 @@ app.post("/favourites", requireLogin, async (req, res) => {
   const { name, anime, image } = req.body;
   try {
     const found = await Favorite.findOne({
-      user_id: req.session.userId,
+      user_id: req.userId,
       name: name,
     });
     if (found) {
       res.redirect("/favourites");
     } else {
       await Favorite.create({
-        user_id: req.session.userId,
+        // Create is shortcut for new and .save() combination .
+        user_id: req.userId,
         name: name,
         anime: anime,
         image: image,
@@ -121,20 +147,19 @@ app.post("/favourites", requireLogin, async (req, res) => {
   }
 });
 
-app.get("/login", (req, res) => {
-  res.render("login");
-});
+authRouter.get("/login", (req, res) => res.render("login"));
+authRouter.get("/signup", (req, res) => res.render("signup"));
 
-app.get("/signup", (req, res) => {
-  res.render("signup");
-});
-
-app.post("/login", async (req, res) => {
+authRouter.post("/login", async (req, res) => {
   const { email, password } = req.body;
   try {
     const found = await User.findOne({ email: email });
     if (found && found.password === password) {
-      req.session.userId = found._id;
+      const token = createToken(found._id);
+      res.cookie("jwt", token, {
+        httpOnly: true,
+        maxAge: 24 * 60 * 60 * 1000,
+      });
       res.redirect("/");
     } else {
       res.send(`Invalid Email or Password <a href="/login"> Try Again</a>`);
@@ -145,7 +170,7 @@ app.post("/login", async (req, res) => {
   }
 });
 
-app.post("/signup", async (req, res) => {
+authRouter.post("/signup", async (req, res) => {
   const { name, email, password } = req.body;
   try {
     const found = await User.findOne({ email: email });
@@ -158,8 +183,15 @@ app.post("/signup", async (req, res) => {
         password: password,
       });
       await newUser.save();
+
+      const token = createToken(newUser._id);
+      res.cookie("jwt", token, {
+        httpOnly: true,
+        maxAge: 24 * 60 * 60 * 1000,
+      });
+
       console.log("New User Created:", newUser);
-      res.redirect("/login");
+      res.redirect("/");
     }
   } catch (err) {
     console.log(err);
@@ -167,8 +199,8 @@ app.post("/signup", async (req, res) => {
   }
 });
 
-app.get("/logout", (req, res) => {
-  req.session = null;
+authRouter.get("/logout", (req, res) => {
+  res.cookie("jwt", "", { maxAge: 1 });
   res.redirect("/");
 });
 
