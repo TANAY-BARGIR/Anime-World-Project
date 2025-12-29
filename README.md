@@ -51,11 +51,3 @@ Before running this project, make sure you have the following installed:
 
 ## 👤 Author
 Tanay Bargir
-
----
-
-## 🚀 Next Step
-Add this file, run `git add .`, `git commit -m "Add README"`, and `git push`.  
-Then your project is officially complete! 🚀
-
-Let me know if you'd like any adjustments!
